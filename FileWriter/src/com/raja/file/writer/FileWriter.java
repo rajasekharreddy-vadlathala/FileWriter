@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class FileWriter {
 
-	public static void writeToFile(int input,String s)throws IOException {
+	private static void writeToFile(int input,String s)throws IOException {
 
 		if(input>0) {
 			//2 power(30)-1 = 1073741823
@@ -17,7 +17,7 @@ public class FileWriter {
 
 			File file = new File(filePath);
 
-			int bufferSize = 625000;//5 MB
+			final int bufferSize = 625000;//5 MB
 
 			try (FileOutputStream fos = new FileOutputStream(file))
 			{
